@@ -1,0 +1,19 @@
+@import "../../assets/scss/buttons";
+@import "../../assets/scss/forms";
+
+.user__data {
+  width: 30rem;
+  margin: 2rem auto;
+}
+
+.button_edit,
+.button_save {
+  @include button-primary;
+  margin: 1rem;
+}
+
+.button_delete,
+.button_cancel {
+  @include button-accent;
+  margin: 1rem;
+}

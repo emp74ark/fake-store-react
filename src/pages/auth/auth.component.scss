@@ -1,0 +1,21 @@
+@import '../../assets/scss/colors';
+
+.auth__mode {
+  display: flex;
+  background: $dark;
+  width: fit-content;
+  border-radius: .3rem;
+  margin: 2rem auto;
+  padding: .5rem 1rem;
+  gap: 1rem;
+  color: $font-color-middle;
+  font-size: 2rem;
+}
+.auth__mode_active {
+  color: $font-color-light;
+}
+
+.disclaimer {
+  width: 30rem;
+  margin: 2rem auto;
+}

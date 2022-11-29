@@ -1,0 +1,63 @@
+form {
+  width: 30rem;
+  margin: 5rem auto;
+}
+
+.form-control {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+button {
+  background: #497174;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem #497174;
+  transition: all 0.1s;
+  font-size: 1.6rem;
+  margin: 1rem auto;
+}
+button:hover {
+  transform: translate(-0.1rem, -0.1rem);
+}
+
+.user__data {
+  width: 30rem;
+  margin: 2rem auto;
+}
+
+.button_edit,
+.button_save {
+  background: #497174;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem #497174;
+  transition: all 0.1s;
+  font-size: 1.6rem;
+  margin: 1rem;
+}
+.button_edit:hover,
+.button_save:hover {
+  transform: translate(-0.1rem, -0.1rem);
+}
+
+.button_delete,
+.button_cancel {
+  background: #EB6440;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem #497174;
+  transition: all 0.1s;
+  font-size: 1.6rem;
+  margin: 1rem;
+}
+.button_delete:hover,
+.button_cancel:hover {
+  transform: translate(-0.1rem, -0.1rem);
+}
+
+/*# sourceMappingURL=user.component.css.map */

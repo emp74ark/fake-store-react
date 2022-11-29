@@ -1,0 +1,22 @@
+.auth__mode {
+  display: flex;
+  background: #497174;
+  width: fit-content;
+  border-radius: 0.3rem;
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+  color: #a4a8a8;
+  font-size: 2rem;
+}
+
+.auth__mode_active {
+  color: #EFF5F5;
+}
+
+.disclaimer {
+  width: 30rem;
+  margin: 2rem auto;
+}
+
+/*# sourceMappingURL=auth.component.css.map */

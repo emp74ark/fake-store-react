@@ -1,0 +1,19 @@
+.ufo {
+  height: calc(100vh - 18rem);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  background-image: url("../../assets/images/pexels-george-dolgikh-1666067.jpg");
+}
+.ufo h2 {
+  font-size: 5rem;
+  color: #EFF5F5;
+  text-shadow: 0.2rem 0.2rem 0.3rem #497174;
+}
+
+/*# sourceMappingURL=ufo.component.css.map */

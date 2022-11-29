@@ -1,0 +1,38 @@
+.item__description {
+  width: 80vw;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+.item__description img {
+  display: block;
+  margin: auto;
+  max-height: calc(100vh - 25rem);
+  border-radius: 0.5rem;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 50%;
+}
+
+button {
+  background: #497174;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem #497174;
+  transition: all 0.1s;
+  font-size: 1.6rem;
+  margin: 3rem auto;
+}
+button:hover {
+  transform: translate(-0.1rem, -0.1rem);
+}
+
+/*# sourceMappingURL=product.component.css.map */

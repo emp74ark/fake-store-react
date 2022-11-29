@@ -1,0 +1,37 @@
+.spinner-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #ccc;
+  opacity: 0.5;
+}
+
+.spinner {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: #EB6440;
+  position: fixed;
+  left: calc(50% - 2.5rem);
+  top: calc(50% - 2.5rem);
+  box-shadow: 0 0 1rem #EB6440;
+  animation-name: blink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(0.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.2);
+  }
+}
+
+/*# sourceMappingURL=spinner.component.css.map */

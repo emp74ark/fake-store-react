@@ -1,33 +1,34 @@
 import { FC } from "react";
 import "./header.component.scss";
 import logo from "../../assets/images/fakestore-logo.png"
+import { NavLink } from "react-router-dom";
 
 export const HeaderComponent: FC = () => {
   return (
       <header>
-        <a>
+        <NavLink to={'/'}>
           <img src={logo} alt="Fake store"/>
-        </a>
+        </NavLink>
         <nav>
           <ul>
             <li>
-              <a>Catalogue</a>
+              <NavLink to={'/store'}>Catalogue</NavLink>
             </li>
             <li>
-              <a>Cart</a>
+              <NavLink to={'/cart'}>Cart</NavLink>
             </li>
             <li>
-              <a>
+              <NavLink to={'/user'}>
                 User
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a>
+              <NavLink to={'/auth'}>
                 Login
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a>Logout</a>
+              <NavLink to={''}>Logout</NavLink>
             </li>
           </ul>
         </nav>

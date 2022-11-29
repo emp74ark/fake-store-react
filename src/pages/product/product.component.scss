@@ -1,0 +1,27 @@
+@import "../../assets/scss/buttons";
+
+.item__description {
+  width: 80vw;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  img {
+    display: block;
+    margin: auto;
+    max-height: calc(100vh - 25rem);
+    border-radius: .5rem;
+  }
+}
+.left {
+  width: 50%;
+}
+.right {
+  width: 50%;
+}
+
+button {
+  @include button-primary;
+  margin: 3rem auto;
+}

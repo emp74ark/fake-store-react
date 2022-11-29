@@ -1,0 +1,70 @@
+.items {
+  width: 90%;
+  margin: auto;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0.1rem solid #497174;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+.item input {
+  width: 4rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+}
+.item button {
+  background: #EB6440;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem #497174;
+  transition: all 0.1s;
+  font-size: 1.6rem;
+}
+.item button:hover {
+  transform: translate(-0.1rem, -0.1rem);
+}
+
+.item__title {
+  width: auto;
+  margin: 0.5rem 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.item__quantity {
+  flex: none;
+  padding: 0.5rem 1rem;
+  background: #497174;
+  color: #EFF5F5;
+  width: 15rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.empty__cart {
+  height: calc(100vh - 18rem);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  background-image: url("../../assets/images/pexels-sora-shimazaki-5926227.jpg");
+}
+.empty__cart h2 {
+  font-size: 5rem;
+  color: #EFF5F5;
+  text-shadow: 0.2rem 0.2rem 0.3rem #497174;
+}
+
+/*# sourceMappingURL=cart.component.css.map */
