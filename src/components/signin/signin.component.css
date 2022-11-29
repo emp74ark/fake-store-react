@@ -1,0 +1,26 @@
+form {
+  width: 30rem;
+  margin: 5rem auto;
+}
+
+.form-control {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+button {
+  background: #497174;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem #497174;
+  transition: all 0.1s;
+  font-size: 1.6rem;
+  margin: 1rem auto;
+}
+button:hover {
+  transform: translate(-0.1rem, -0.1rem);
+}
+
+/*# sourceMappingURL=signin.component.css.map */

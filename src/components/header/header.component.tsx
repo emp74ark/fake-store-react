@@ -2,6 +2,7 @@ import { FC } from "react";
 import "./header.component.scss";
 import logo from "../../assets/images/fakestore-logo.png"
 import { NavLink } from "react-router-dom";
+import { signout } from "../../services/user.service";
 
 export const HeaderComponent: FC = () => {
   return (
@@ -28,7 +29,7 @@ export const HeaderComponent: FC = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to={''}>Logout</NavLink>
+              <NavLink to={''} onClick={signout}>Logout</NavLink>
             </li>
           </ul>
         </nav>
