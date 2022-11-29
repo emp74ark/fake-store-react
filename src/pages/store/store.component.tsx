@@ -1,9 +1,8 @@
 import { FC } from "react";
+import { ItemsComponent } from "../../components/items/items.component";
 
 export const StoreComponent: FC = () => {
   return (
-      <h1>
-        Store
-      </h1>
+      <ItemsComponent></ItemsComponent>
   );
 }

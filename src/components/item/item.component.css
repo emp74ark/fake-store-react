@@ -1,0 +1,62 @@
+.item {
+  width: 20rem;
+  height: 30rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 0.5rem #497174;
+  padding: 0 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.item h4 {
+  height: 2rem;
+}
+.item img {
+  display: block;
+  margin: auto;
+  max-width: 15rem;
+  height: 12rem;
+  border-radius: 0.5rem;
+}
+.item button {
+  margin: auto;
+  width: fit-content;
+}
+.item:hover {
+  scale: 1.01;
+}
+
+.item__info {
+  height: 12rem;
+  overflow: hidden;
+}
+
+.item__price {
+  align-self: center;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+}
+
+button {
+  background: #497174;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem #497174;
+  transition: all 0.1s;
+  font-size: 1.6rem;
+}
+button:hover {
+  transform: translate(-0.1rem, -0.1rem);
+}
+
+@media (max-width: 700px) {
+  .item {
+    width: 16rem;
+  }
+}
+
+/*# sourceMappingURL=item.component.css.map */
