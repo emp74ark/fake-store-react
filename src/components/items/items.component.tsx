@@ -4,6 +4,7 @@ import { Item } from "../../shared/interfaces";
 import { ItemComponents } from "../item/item.components";
 import { getAll, getCategories } from "../../services/items.service";
 import { SpinnerComponent } from "../spinner/spinner.component";
+import { SearchComponent } from "../search/search.component";
 
 export const ItemsComponent: FC = () => {
   const [items, setItems] = useState<Item[]>([])
@@ -48,6 +49,16 @@ export const ItemsComponent: FC = () => {
     setFilterVisibility(!filterVisibility)
   }
 
+  const onSearch = (req: string) => {
+    const {limit, sort} = filters;
+    getAll('', limit, sort)
+        .then(response => {
+              const newData = response.data.filter(el => el.title.toLowerCase().includes(req.toLowerCase()));
+              setItems(newData)
+            }
+        );
+  }
+
   return (
       <>
         <h2>Items</h2>
@@ -61,6 +72,7 @@ export const ItemsComponent: FC = () => {
                 {filterVisibility && <span>hide</span>}
               </span>
             </h3>
+            <SearchComponent func={onSearch}></SearchComponent>
             <div className={filterVisibility ? 'category' : 'category show_active'}
                  onClick={() => onCategory('')}>All
             </div>
