@@ -27,8 +27,8 @@ function updateUser(id: number, user: User) {
   return http.patch(`${BASE_URL}/users/${id}`, user)
 }
 
-function userInfo(id: number) {
+function getUserInfo(id: number) {
   return http<User>(`${BASE_URL}/users/${id}`)
 }
 
-export {signup, signin, signout, deleteUser, updateUser, userInfo}
+export {signup, signin, signout, deleteUser, updateUser, getUserInfo}
