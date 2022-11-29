@@ -1,0 +1,56 @@
+header {
+  background: #497174;
+  border-radius: 0.5rem;
+  height: 5rem;
+  box-shadow: 0 0.2rem 0.3rem #497174;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+header img {
+  width: 3.5rem;
+  filter: grayscale(1) contrast(1);
+  opacity: 0.5;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+nav a {
+  font-size: 2rem;
+  color: #EFF5F5;
+}
+nav span {
+  font-size: 2rem;
+}
+
+.active {
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0 0.8rem;
+  }
+  header img {
+    width: 3rem;
+  }
+
+  nav li {
+    margin: 0 0.3rem;
+  }
+  nav a {
+    font-size: 1.6rem;
+  }
+  nav span {
+    font-size: 1.6rem;
+  }
+}
+
+/*# sourceMappingURL=header.component.css.map */

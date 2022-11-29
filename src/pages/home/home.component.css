@@ -1,0 +1,67 @@
+section {
+  display: flex;
+}
+section img {
+  width: 12rem;
+  height: 12rem;
+}
+
+section {
+  height: calc(100vh - 6rem);
+  width: 100%;
+  background: #D6E4E5;
+  margin: 0.5rem auto;
+  position: relative;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+}
+
+.left {
+  background: #EFF5F5;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: initial;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    width: 30%;
+    opacity: 0;
+  }
+  to {
+    width: 50%;
+    opacity: 0.7;
+  }
+}
+.right {
+  width: 70%;
+}
+
+@media (max-width: 480px) {
+  section {
+    flex-direction: column;
+  }
+  section .left {
+    width: 100%;
+    margin: 30% 0;
+    padding: 2rem 0;
+    animation: none;
+  }
+  section .right {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=home.component.css.map */

@@ -1,0 +1,57 @@
+@import "../../assets/scss/colors";
+
+header {
+  background: $dark;
+  border-radius: .5rem;
+  height: 5rem;
+  box-shadow: 0 .2rem .3rem $dark;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  img {
+    width: 3.5rem;
+    filter: grayscale(1) contrast(1 );
+    opacity: .5;
+  }
+}
+nav {
+  ul {
+    display: flex;
+    list-style: none;
+    li {
+      display: inline-block;
+      margin: 0 .5rem;
+    }
+  }
+  a {
+    font-size: 2rem;
+    color: $font-color-light;
+  }
+  span {
+    font-size: 2rem;
+  }
+}
+.active {
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0 .8rem;
+    img {
+      width: 3rem;
+    }
+  }
+  nav {
+    li {
+      margin: 0 .3rem;
+    }
+    a {
+      font-size: 1.6rem;
+    }
+    span {
+      font-size: 1.6rem;
+    }
+  }
+}
