@@ -6,7 +6,7 @@ import { getAll, getCategories } from "../../services/items.service";
 import { SpinnerComponent } from "../spinner/spinner.component";
 import { SearchComponent } from "../search/search.component";
 
-export const ItemsComponent: FC = () => {
+const ItemsComponent: FC = () => {
   const [items, setItems] = useState<Item[]>([])
   const [filters, setFilters] = useState({
     limit: 10,
@@ -121,3 +121,5 @@ export const ItemsComponent: FC = () => {
       </>
   );
 }
+
+export default ItemsComponent;

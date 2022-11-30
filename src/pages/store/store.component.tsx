@@ -1,8 +1,9 @@
-import { FC } from "react";
-import { ItemsComponent } from "../../components/items/items.component";
-
+import { FC, Suspense, lazy } from "react";
+const Items = lazy(() => import('../../components/items/items.component'));
 export const StoreComponent: FC = () => {
   return (
-      <ItemsComponent></ItemsComponent>
+      <Suspense>
+        <Items />
+      </Suspense>
   );
 }
