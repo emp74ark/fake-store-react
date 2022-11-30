@@ -2,11 +2,11 @@
 @import "../../assets/scss/buttons";
 @import "../../assets/scss/empty";
 
-.items {
+.cart__items {
   width: 90%;
   margin: auto;
 }
-.item {
+.cart__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,16 +22,17 @@
   }
   button {
     @include button-accent;
+    margin: 0 auto;
   }
 }
-.item__title {
+.cart__item-title {
   width: auto;
   margin: .5rem 1rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.item__quantity {
+.cart__item-quantity {
   flex: none;
   padding: .5rem 1rem;
   background: $dark;

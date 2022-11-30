@@ -9,6 +9,7 @@ export interface Item {
     rate: number;
     count: number;
   };
+  quantity?: number;
 }
 
 export interface User {
@@ -34,4 +35,22 @@ export interface User {
 
 export interface AuthResponse {
   token: string;
+}
+
+export interface AuthActions {
+  type: 'auth' | 'token';
+  payload: string | boolean;
+}
+
+export interface AuthState {
+  authenticated: boolean;
+  token: string;
+}
+export interface AuthContext {
+  state: AuthState;
+  dispatch: React.Dispatch<AuthActions>
+}
+
+export interface Children {
+  children: JSX.Element;
 }
