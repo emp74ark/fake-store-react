@@ -10,11 +10,11 @@ form {
 }
 
 button {
-  background: #497174;
+  background: #545f67;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  box-shadow: 0.1rem 0.1rem 0.2rem #497174;
+  box-shadow: 0.1rem 0.1rem 0.2rem #545f67;
   transition: all 0.1s;
   font-size: 1.6rem;
   margin: 1rem auto;
@@ -30,11 +30,11 @@ button:hover {
 
 .button_edit,
 .button_save {
-  background: #497174;
+  background: #545f67;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  box-shadow: 0.1rem 0.1rem 0.2rem #497174;
+  box-shadow: 0.1rem 0.1rem 0.2rem #545f67;
   transition: all 0.1s;
   font-size: 1.6rem;
   margin: 1rem;
@@ -46,11 +46,11 @@ button:hover {
 
 .button_delete,
 .button_cancel {
-  background: #EB6440;
+  background: #7895B2;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  box-shadow: 0.1rem 0.1rem 0.2rem #497174;
+  box-shadow: 0.1rem 0.1rem 0.2rem #545f67;
   transition: all 0.1s;
   font-size: 1.6rem;
   margin: 1rem;

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import "./home.component.scss";
 import fakestore from "../../assets/images/fakeStoreApi.png";
-import angular from "../../assets/images/angular.png";
+import react from "../../assets/images/react.png";
 import bg1 from "../../assets/images/pexels-andrea-piacquadio-974911.jpg"
 import bg2 from "../../assets/images/pexels-karolina-grabowska-5706277.jpg";
 
@@ -21,9 +21,9 @@ export const HomeComponent: FC = () => {
           <div className="right"></div>
           <div className="left">
             <h2>
-              Made with <a href="https://angular.io/" target="_blank" rel="noreferrer">Angular</a>
+              Made with <a href="reactjs.org" target="_blank" rel="noreferrer">React</a>
             </h2>
-            <img src={angular} alt="Angular logo"/>
+            <img src={react} alt="React logo"/>
           </div>
         </section>
       </>

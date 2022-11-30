@@ -1,0 +1,28 @@
+footer {
+  background: #545f67;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  height: 5rem;
+  box-shadow: 0 -0.2rem 0.3rem #545f67;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+footer ul li a {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+footer ul img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/*# sourceMappingURL=footer.component.css.map */

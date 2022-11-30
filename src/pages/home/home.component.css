@@ -9,7 +9,7 @@ section img {
 section {
   height: calc(100vh - 6rem);
   width: 100%;
-  background: #D6E4E5;
+  background: #E8DFCA;
   margin: 0.5rem auto;
   position: relative;
   display: flex;
@@ -20,7 +20,7 @@ section {
 }
 
 .left {
-  background: #EFF5F5;
+  background: #f6f4f4;
   width: 30%;
   display: flex;
   flex-direction: column;

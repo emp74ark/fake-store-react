@@ -1,8 +1,8 @@
 input {
-  border: 0.1rem solid #497174;
+  border: 0.1rem solid #545f67;
   border-radius: 0.5rem;
   padding: 0.3rem 1rem;
-  background: #EFF5F5;
+  background: #f6f4f4;
 }
 
 .search {

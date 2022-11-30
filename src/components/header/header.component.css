@@ -1,8 +1,8 @@
 header {
-  background: #497174;
+  background: #545f67;
   border-radius: 0.5rem;
   height: 5rem;
-  box-shadow: 0 0.2rem 0.3rem #497174;
+  box-shadow: 0 0.2rem 0.3rem #545f67;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,11 +24,11 @@ nav ul li {
 }
 nav a {
   font-size: 2rem;
-  color: #EFF5F5;
+  color: #F5EFE6;
 }
 nav span {
   font-size: 2rem;
-  color: #EFF5F5;
+  color: #F5EFE6;
   cursor: pointer;
 }
 

@@ -1,6 +1,6 @@
 .auth__mode {
   display: flex;
-  background: #497174;
+  background: #545f67;
   width: fit-content;
   border-radius: 0.3rem;
   margin: 2rem auto;
@@ -11,7 +11,7 @@
 }
 
 .auth__mode_active {
-  color: #EFF5F5;
+  color: #F5EFE6;
 }
 
 .disclaimer {

@@ -6,7 +6,7 @@
 body {
   padding: 0.5rem 2rem;
   margin: 0;
-  background: #EFF5F5;
+  background: #f6f4f4;
 }
 
 h1 {
@@ -29,7 +29,7 @@ a:hover {
 }
 
 .error {
-  color: #EB6440;
+  color: #7895B2;
   font-size: 1.2rem;
   text-align: center;
 }
