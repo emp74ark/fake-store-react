@@ -30,6 +30,8 @@ nav {
   }
   span {
     font-size: 2rem;
+    color: $font-color-light;
+    cursor: pointer;
   }
 }
 .active {

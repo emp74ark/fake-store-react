@@ -2,21 +2,12 @@ import { http } from "./http.interceptor";
 import { BASE_URL } from "./http.service.conf";
 import { AuthResponse, User } from "../shared/interfaces";
 
-export const user = {
-  authenticated: false,
-  token: ''
-}
-
 function signup(user: User) {
     return http.post(`${BASE_URL}/users`, user)
   }
 
 function signin(user: User) {
   return http.post<AuthResponse>(`${BASE_URL}/auth/login`, user);
-}
-
-function signout() {
-  user.authenticated = false;
 }
 
 function deleteUser(id: number) {
@@ -31,4 +22,4 @@ function getUserInfo(id: number) {
   return http<User>(`${BASE_URL}/users/${id}`)
 }
 
-export {signup, signin, signout, deleteUser, updateUser, getUserInfo}
+export {signup, signin, deleteUser, updateUser, getUserInfo}

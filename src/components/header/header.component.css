@@ -28,6 +28,8 @@ nav a {
 }
 nav span {
   font-size: 2rem;
+  color: #EFF5F5;
+  cursor: pointer;
 }
 
 .active {

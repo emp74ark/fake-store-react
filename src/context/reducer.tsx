@@ -7,6 +7,7 @@ export const authReducer: Reducer<AuthState, AuthActions> = (state, action) => {
       state = {...state, authenticated: action.payload as boolean};
       return state;
     case "token":
+      localStorage.setItem('token', action.payload as string)
       state = {...state, token: action.payload as string};
       return state;
     default:

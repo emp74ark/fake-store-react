@@ -1,11 +1,13 @@
 import "./user.component.scss";
-import { FC, useEffect, useState } from "react";
+import { FC, useContext, useEffect, useState } from "react";
 import { User } from "../../shared/interfaces";
-import { getUserInfo, signout, updateUser } from "../../services/user.service";
+import { getUserInfo, updateUser } from "../../services/user.service";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { authContext } from "../../context/state";
 
 export const UserComponent: FC = () => {
+  const {dispatch} = useContext(authContext);
   const [userInfo, setUserInfo] = useState<User>({
     username: '',
     email: ''
@@ -29,7 +31,8 @@ export const UserComponent: FC = () => {
   }
 
   const deleteUser = () => {
-    signout();
+    dispatch({type: "auth", payload: false});
+    dispatch({type: "token", payload: ""})
     navigate('/auth');
   }
 
