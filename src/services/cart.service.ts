@@ -1,4 +1,4 @@
-import { Item } from "../shared/interfaces";
+import {Item} from '../shared/interfaces';
 import {Cart} from '../shared/types';
 
 export const cart: Cart = new Map();
@@ -9,7 +9,7 @@ function getAll() {
 
 function addToCart(item: Item, quantity = 1) {
   for (const [key, value] of cart.entries()) {
-    if ( key.id === item.id) {
+    if (key.id === item.id) {
       cart.delete(key);
       cart.set(item, value + 1);
       return;
@@ -26,4 +26,9 @@ function updateInCart(item: Item, quantity: number) {
   cart.set(item, quantity);
 }
 
-export {getAll, addToCart, removeFromCart, updateInCart}
+function clearCart() {
+  console.log(cart);
+  cart.clear();
+}
+
+export {getAll, addToCart, removeFromCart, updateInCart, clearCart}

@@ -58,7 +58,7 @@ export interface Children {
 }
 
 export interface CartActions {
-  type: 'add' | 'update' | 'remove';
+  type: 'add' | 'update' | 'remove' | 'clear';
   payload: {item: Item, quantity: number};
 }
 

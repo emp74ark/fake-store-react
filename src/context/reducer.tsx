@@ -1,7 +1,7 @@
 import {Reducer} from 'react';
 import {AuthActions, AuthState, CartActions} from '../shared/interfaces';
 import {Cart} from '../shared/types';
-import {addToCart, getAll, removeFromCart, updateInCart} from '../services/cart.service';
+import {addToCart, clearCart, getAll, removeFromCart, updateInCart} from '../services/cart.service';
 
 export const authReducer: Reducer<AuthState, AuthActions> = (state, action) => {
   switch (action.type) {
@@ -28,6 +28,10 @@ export const cartReducer: Reducer<Cart, CartActions> = (state, action) => {
     case 'remove':
       removeFromCart(action.payload.item)
       return state = new Map(getAll())
+    case 'clear':
+      console.log('cleared');
+      clearCart();
+      return state = new Map(getAll());
     default:
       throw new Error();
   }

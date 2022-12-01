@@ -1,15 +1,17 @@
-import { FC, useContext } from "react";
-import "./header.component.scss";
-import logo from "../../assets/images/fakestore-logo.png"
-import { NavLink, useNavigate } from "react-router-dom";
-import { authContext } from "../../context/state";
+import {FC, useContext} from 'react';
+import './header.component.scss';
+import logo from '../../assets/images/fakestore-logo.png'
+import {NavLink, useNavigate} from 'react-router-dom';
+import {authContext} from '../../context/state';
+import {clearCart} from '../../services/cart.service';
 
 export const HeaderComponent: FC = () => {
   const {state, dispatch} = useContext(authContext);
   const navigate = useNavigate();
   const logoutHandler = () => {
-    dispatch({type: "auth", payload: false});
-    dispatch({type: "token", payload: ""});
+    dispatch({type: 'auth', payload: false});
+    dispatch({type: 'token', payload: ''});
+    clearCart();
     navigate('/auth');
   }
   return (
@@ -23,26 +25,26 @@ export const HeaderComponent: FC = () => {
               <NavLink to={'/store'}>Catalogue</NavLink>
             </li>
             {
-              !state.authenticated &&
-              <li>
-                <NavLink to={'/auth'}>
-                  Login
-                </NavLink>
-              </li>
+                !state.authenticated &&
+                <li>
+                  <NavLink to={'/auth'}>
+                    Login
+                  </NavLink>
+                </li>
             }
             {
-              state.authenticated &&
-              <>
-                <li>
-                  <NavLink to={'/cart'}>Cart</NavLink>
-                </li>
-                <li>
-                  <NavLink to={'/user'}>User</NavLink>
-                </li>
-                <li>
-                  <span onClick={logoutHandler}>Logout</span>
-                </li>
-              </>
+                state.authenticated &&
+                <>
+                  <li>
+                    <NavLink to={'/cart'}>Cart</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to={'/user'}>User</NavLink>
+                  </li>
+                  <li>
+                    <span onClick={logoutHandler}>Logout</span>
+                  </li>
+                </>
             }
           </ul>
         </nav>

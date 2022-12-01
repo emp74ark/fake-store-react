@@ -1,16 +1,18 @@
 import './product.component.scss';
 import {FC, useContext, useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 import {getSingle} from '../../services/items.service';
 import {Item} from '../../shared/interfaces';
 import {SpinnerComponent} from '../../components/spinner/spinner.component';
-import {cartContext} from '../../context/state';
+import {authContext, cartContext} from '../../context/state';
 
 export const ProductComponent: FC = () => {
   const {id} = useParams()
   const [item, setItem] = useState<Item>();
   const [loading, setLoading] = useState(false)
   const {dispatch} = useContext(cartContext);
+  const {state} = useContext(authContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setLoading(true);
@@ -25,7 +27,11 @@ export const ProductComponent: FC = () => {
   }, [])
 
   const addToCartHandler = () => {
-    dispatch({type: 'add', payload: {item: item!, quantity: 1}});
+    if (state.authenticated) {
+      dispatch({type: 'add', payload: {item: item!, quantity: 1}});
+    } else {
+      navigate('/auth')
+    }
   }
 
   return (
