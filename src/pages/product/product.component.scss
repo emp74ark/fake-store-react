@@ -10,14 +10,15 @@
   img {
     display: block;
     margin: auto;
+    width: 100%;
     max-height: calc(100vh - 25rem);
     border-radius: .5rem;
   }
 }
-.left {
+.product__left {
   width: 50%;
 }
-.right {
+.product__right {
   width: 50%;
 }
 

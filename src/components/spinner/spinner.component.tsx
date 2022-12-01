@@ -4,8 +4,8 @@ import "./spinner.component.scss";
 export const SpinnerComponent: FC = () => {
   return (
     <>
-      <div className="spinner-wrapper"></div>
-      <div className="spinner"></div>
+      <div className="spinner-wrapper" />
+      <div className="spinner" />
     </>
   );
 }
