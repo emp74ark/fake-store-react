@@ -1,25 +1,24 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.scss';
-import { HeaderComponent } from "./components/header/header.component";
-import { FooterComponent } from "./components/footer/footer.component";
-import { routes } from "./routes/routes";
-import "./App.scss";
-import { AuthContextProvider } from "./context/provider";
+import {HeaderComponent} from './components/header/header.component';
+import {FooterComponent} from './components/footer/footer.component';
+import {appRoutes} from './routes/routes';
+import {AuthContextProvider} from './context/provider';
 
 function App() {
   return (
       <AuthContextProvider>
         <BrowserRouter>
-          <HeaderComponent></HeaderComponent>
+          <HeaderComponent />
           <main>
             <Routes>
-              {routes.map(route => (
-                  <Route key={route.title} path={route.path} element={route.element}/>
+              {appRoutes.map(route => (
+                  <Route key={route.title} path={route.path} element={route.element} />
               ))}
             </Routes>
           </main>
-          <FooterComponent></FooterComponent>
+          <FooterComponent />
         </BrowserRouter>
       </AuthContextProvider>
 
