@@ -10,23 +10,20 @@ function getAll() {
 function addToCart(item: Item, quantity = 1) {
   for (const [key, value] of cart.entries()) {
     if ( key.id === item.id) {
-      removeFromCart(item);
+      cart.delete(key);
       cart.set(item, value + 1);
-      return cart;
+      return;
     }
   }
   cart.set(item, quantity);
-  return cart;
 }
 
 function removeFromCart(item: Item) {
   cart.delete(item);
-  return cart;
 }
 
 function updateInCart(item: Item, quantity: number) {
-  cart.set(item, quantity)
-  return cart;
+  cart.set(item, quantity);
 }
 
 export {getAll, addToCart, removeFromCart, updateInCart}

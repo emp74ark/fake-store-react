@@ -1,7 +1,7 @@
 import {Reducer} from 'react';
 import {AuthActions, AuthState, CartActions} from '../shared/interfaces';
 import {Cart} from '../shared/types';
-import {addToCart, removeFromCart, updateInCart} from '../services/cart.service';
+import {addToCart, getAll, removeFromCart, updateInCart} from '../services/cart.service';
 
 export const authReducer: Reducer<AuthState, AuthActions> = (state, action) => {
   switch (action.type) {
@@ -20,17 +20,14 @@ export const authReducer: Reducer<AuthState, AuthActions> = (state, action) => {
 export const cartReducer: Reducer<Cart, CartActions> = (state, action) => {
   switch (action.type) {
     case 'add':
-      state = addToCart(action.payload.item, action.payload.quantity)
-      console.log(state);
-      return state;
-    case 'remove':
-      state = updateInCart(action.payload.item, action.payload.quantity)
-      console.log(state);
-      return state;
+      addToCart(action.payload.item, action.payload.quantity)
+      return  state = new Map(getAll())
     case 'update':
-      state = removeFromCart(action.payload.item)
-      console.log(state);
-      return state;
+      updateInCart(action.payload.item, action.payload.quantity)
+      return  state = new Map(getAll())
+    case 'remove':
+      removeFromCart(action.payload.item)
+      return state = new Map(getAll())
     default:
       throw new Error();
   }
