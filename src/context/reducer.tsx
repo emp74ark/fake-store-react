@@ -1,14 +1,35 @@
-import { Reducer } from "react";
-import { AuthActions, AuthState } from "../shared/interfaces";
+import {Reducer} from 'react';
+import {AuthActions, AuthState, CartActions} from '../shared/interfaces';
+import {Cart} from '../shared/types';
+import {addToCart, removeFromCart, updateInCart} from '../services/cart.service';
 
 export const authReducer: Reducer<AuthState, AuthActions> = (state, action) => {
   switch (action.type) {
-    case "auth":
+    case 'auth':
       state = {...state, authenticated: action.payload as boolean};
       return state;
-    case "token":
+    case 'token':
       localStorage.setItem('token', action.payload as string)
       state = {...state, token: action.payload as string};
+      return state;
+    default:
+      throw new Error();
+  }
+}
+
+export const cartReducer: Reducer<Cart, CartActions> = (state, action) => {
+  switch (action.type) {
+    case 'add':
+      state = addToCart(action.payload.item, action.payload.quantity)
+      console.log(state);
+      return state;
+    case 'remove':
+      state = updateInCart(action.payload.item, action.payload.quantity)
+      console.log(state);
+      return state;
+    case 'update':
+      state = removeFromCart(action.payload.item)
+      console.log(state);
       return state;
     default:
       throw new Error();

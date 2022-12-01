@@ -1,14 +1,16 @@
-import "./product.component.scss";
-import {FC, useEffect, useState} from 'react';
-import { useParams } from "react-router-dom";
-import { getSingle } from "../../services/items.service";
+import './product.component.scss';
+import {FC, useContext, useEffect, useState} from 'react';
+import {useParams} from 'react-router-dom';
+import {getSingle} from '../../services/items.service';
 import {Item} from '../../shared/interfaces';
 import {SpinnerComponent} from '../../components/spinner/spinner.component';
+import {cartContext} from '../../context/state';
 
 export const ProductComponent: FC = () => {
   const {id} = useParams()
   const [item, setItem] = useState<Item>();
   const [loading, setLoading] = useState(false)
+  const {dispatch} = useContext(cartContext);
 
   useEffect(() => {
     setLoading(true);
@@ -21,9 +23,14 @@ export const ProductComponent: FC = () => {
         }
     )
   }, [])
+
+  const addToCartHandler = () => {
+    dispatch({type: 'add', payload: {item: item!, quantity: 1}});
+  }
+
   return (
       <>
-        {loading && <SpinnerComponent />}
+        {loading && <SpinnerComponent/>}
         <h2>{item?.title}</h2>
         <div className="item__description">
           <div className="product__left">
@@ -35,7 +42,7 @@ export const ProductComponent: FC = () => {
               <li>Rating: {item?.rating.rate}</li>
               <li>Category: {item?.category}</li>
             </ul>
-            <button>Add to cart</button>
+            <button onClick={addToCartHandler}>Add to cart</button>
           </div>
           <div className="product__right">
             <img src={item?.image} alt={item?.title}/>

@@ -1,3 +1,5 @@
+import {Cart} from './types';
+
 export interface Item {
   id: number;
   title: string;
@@ -53,4 +55,14 @@ export interface AuthContext {
 
 export interface Children {
   children: JSX.Element;
+}
+
+export interface CartActions {
+  type: 'add' | 'update' | 'remove';
+  payload: {item: Item, quantity: number};
+}
+
+export interface CartContext {
+  state: Cart;
+  dispatch: React.Dispatch<CartActions>;
 }
