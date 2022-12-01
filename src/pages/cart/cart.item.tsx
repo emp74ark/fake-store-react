@@ -20,6 +20,7 @@ export const CartItem: FC<{item: Item, quantity: number}> = ({item, quantity}) =
                 name="quantity"
                 id="quantity"
                 value={quantity}
+                min={1}
                 onChange={(e) => update(e, item)}
             />
             <button onClick={() => remove(item)}>Remove</button>
