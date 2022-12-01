@@ -9,7 +9,7 @@ import {AuthContextProvider, CartContextProvider} from './context/provider';
 function App() {
   return (
       <AuthContextProvider>
-        <BrowserRouter>
+        <BrowserRouter basename='/fake-store-react'>
           <HeaderComponent />
           <CartContextProvider>
             <main>
