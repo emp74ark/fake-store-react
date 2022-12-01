@@ -21,10 +21,10 @@ export const cartReducer: Reducer<Cart, CartActions> = (state, action) => {
   switch (action.type) {
     case 'add':
       addToCart(action.payload.item, action.payload.quantity)
-      return  state = new Map(getAll())
+      return state = new Map(getAll())
     case 'update':
       updateInCart(action.payload.item, action.payload.quantity)
-      return  state = new Map(getAll())
+      return state = new Map(getAll())
     case 'remove':
       removeFromCart(action.payload.item)
       return state = new Map(getAll())

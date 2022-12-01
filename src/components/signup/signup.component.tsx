@@ -27,7 +27,8 @@ export const SignupComponent: FC<{func: () => void}> = (props) => {
         {errors.email?.type === 'pattern' && <div className="error">Email is not valid</div>}
         <div className="form-control">
           <label htmlFor="password">Password</label>
-          <input {...register('password', {required: true, minLength: 6})} type="password" name="password" id="password"/>
+          <input {...register('password', {required: true, minLength: 6})} type="password" name="password"
+                 id="password"/>
         </div>
         {errors.password?.type === 'required' && <div className="error">Password is required</div>}
         {errors.password?.type === 'minLength' && <div className="error">Password must be longer than 6 symbols</div>}

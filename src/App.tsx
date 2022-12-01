@@ -9,18 +9,18 @@ import {AuthContextProvider, CartContextProvider} from './context/provider';
 function App() {
   return (
       <AuthContextProvider>
-        <BrowserRouter basename='/fake-store-react'>
-          <HeaderComponent />
+        <BrowserRouter basename="/fake-store-react">
+          <HeaderComponent/>
           <CartContextProvider>
             <main>
               <Routes>
                 {appRoutes.map(route => (
-                    <Route key={route.title} path={route.path} element={route.element} />
+                    <Route key={route.title} path={route.path} element={route.element}/>
                 ))}
               </Routes>
             </main>
           </CartContextProvider>
-          <FooterComponent />
+          <FooterComponent/>
         </BrowserRouter>
       </AuthContextProvider>
 

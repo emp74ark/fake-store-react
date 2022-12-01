@@ -1,5 +1,5 @@
-import { createContext } from "react";
-import {AuthState, AuthContext, CartContext} from '../shared/interfaces';
+import {createContext} from 'react';
+import {AuthContext, AuthState, CartContext} from '../shared/interfaces';
 import {cart} from '../services/cart.service';
 
 export const authState: AuthState = {
@@ -9,10 +9,12 @@ export const authState: AuthState = {
 
 export const authContext = createContext<AuthContext>({
   state: authState,
-  dispatch: () => {},
+  dispatch: () => {
+  },
 })
 
 export const cartContext = createContext<CartContext>({
   state: cart,
-  dispatch: () => {},
+  dispatch: () => {
+  },
 });

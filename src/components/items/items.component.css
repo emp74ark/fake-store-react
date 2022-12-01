@@ -40,7 +40,7 @@
 aside {
   width: 20rem;
   flex: none;
-  background: #E8DFCA;
+  background: #e8dfca;
   color: #000000;
   border-radius: 0.5rem;
   padding: 0 0 1rem 0;
@@ -48,7 +48,7 @@ aside {
 }
 aside h3 {
   background: #545f67;
-  color: #F5EFE6;
+  color: #f5efe6;
   padding: 1.5rem 1rem;
   margin: 0;
   border-radius: 0.5rem 0.5rem 0 0;
@@ -68,7 +68,7 @@ aside h3 {
 }
 .category:hover {
   background: #545f67;
-  color: #F5EFE6;
+  color: #f5efe6;
 }
 
 @media (max-width: 480px) {

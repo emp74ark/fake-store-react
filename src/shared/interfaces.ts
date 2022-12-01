@@ -40,14 +40,15 @@ export interface AuthResponse {
 }
 
 export interface AuthActions {
-  type: 'auth' | 'token';
-  payload: string | boolean;
+  type: 'auth'|'token';
+  payload: string|boolean;
 }
 
 export interface AuthState {
   authenticated: boolean;
   token: string;
 }
+
 export interface AuthContext {
   state: AuthState;
   dispatch: React.Dispatch<AuthActions>
@@ -58,7 +59,7 @@ export interface Children {
 }
 
 export interface CartActions {
-  type: 'add' | 'update' | 'remove' | 'clear';
+  type: 'add'|'update'|'remove'|'clear';
   payload: {item: Item, quantity: number};
 }
 

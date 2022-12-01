@@ -2,6 +2,7 @@
 
 section {
   display: flex;
+
   img {
     width: 12rem;
     height: 12rem;
@@ -20,6 +21,7 @@ section {
   background-position: center;
   border-radius: 1rem;
 }
+
 .left {
   background: $light;
   width: 30%;
@@ -35,22 +37,33 @@ section {
   animation-iteration-count: initial;
   overflow: hidden;
 }
+
 @keyframes fadeIn {
-  from {width: 30%; opacity: 0}
-  to {width: 50%; opacity: .7}
+  from {
+    width: 30%;
+    opacity: 0
+  }
+  to {
+    width: 50%;
+    opacity: .7
+  }
 }
+
 .right {
   width: 70%;
 }
+
 @media (max-width: 480px) {
   section {
     flex-direction: column;
+
     .left {
       width: 100%;
       margin: 30% 0;
       padding: 2rem 0;
       animation: none;
     }
+
     .right {
       display: none;
     }

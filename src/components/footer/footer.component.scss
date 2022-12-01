@@ -8,11 +8,14 @@ footer {
   border-radius: .5rem;
   height: 5rem;
   box-shadow: 0 -.2rem .3rem $dark;
+
   ul {
     list-style: none;
+
     li {
       display: inline-block;
       margin: 0 .5rem;
+
       a {
         font-size: 1.6rem;
         display: flex;
@@ -20,6 +23,7 @@ footer {
         gap: .5rem;
       }
     }
+
     img {
       width: 1.5rem;
       height: 1.5rem;

@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["auth.component.scss","../../assets/scss/colors.scss"],"names":[],"mappings":"AAEA;EACE;EACA,YCDK;EDEL;EACA;EACA;EACA;EACA;EACA,OCHkB;EDIlB;;;AAEF;EACE,OCNiB;;;ADSnB;EACE;EACA","file":"auth.component.css"}
+{"version":3,"sourceRoot":"","sources":["auth.component.scss","../../assets/scss/colors.scss"],"names":[],"mappings":"AAEA;EACE;EACA,YCDK;EDEL;EACA;EACA;EACA;EACA;EACA,OCHkB;EDIlB;;;AAGF;EACE,OCPiB;;;ADUnB;EACE;EACA","file":"auth.component.css"}

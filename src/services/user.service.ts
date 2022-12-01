@@ -1,10 +1,10 @@
-import { http } from "./http.interceptor";
-import { BASE_URL } from "./http.service.conf";
-import { AuthResponse, User } from "../shared/interfaces";
+import {http} from './http.interceptor';
+import {BASE_URL} from './http.service.conf';
+import {AuthResponse, User} from '../shared/interfaces';
 
 function signup(user: User) {
-    return http.post(`${BASE_URL}/users`, user)
-  }
+  return http.post(`${BASE_URL}/users`, user)
+}
 
 function signin(user: User) {
   return http.post<AuthResponse>(`${BASE_URL}/auth/login`, user);

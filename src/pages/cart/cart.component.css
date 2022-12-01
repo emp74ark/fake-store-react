@@ -19,7 +19,7 @@
   padding: 0.5rem;
 }
 .cart__item button {
-  background: #7895B2;
+  background: #7895b2;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -44,7 +44,7 @@
   flex: none;
   padding: 0.5rem 1rem;
   background: #545f67;
-  color: #F5EFE6;
+  color: #f5efe6;
   width: 15rem;
   display: flex;
   justify-content: space-between;
@@ -64,7 +64,7 @@
 }
 .empty__cart h2 {
   font-size: 5rem;
-  color: #F5EFE6;
+  color: #f5efe6;
   text-shadow: 0.2rem 0.2rem 0.3rem #545f67;
 }
 

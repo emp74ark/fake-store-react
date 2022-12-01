@@ -1,13 +1,13 @@
-import { FC, useContext, useState } from "react";
-import { useForm } from "react-hook-form";
-import { User } from "../../shared/interfaces";
-import { signin } from "../../services/user.service";
-import { useNavigate } from "react-router-dom";
-import { SpinnerComponent } from "../spinner/spinner.component";
-import { authContext } from "../../context/state";
+import {FC, useContext, useState} from 'react';
+import {useForm} from 'react-hook-form';
+import {User} from '../../shared/interfaces';
+import {signin} from '../../services/user.service';
+import {useNavigate} from 'react-router-dom';
+import {SpinnerComponent} from '../spinner/spinner.component';
+import {authContext} from '../../context/state';
 
 export const SigninComponent: FC = () => {
-  const {register, handleSubmit, formState: {errors}} = useForm<User>({mode: "all"})
+  const {register, handleSubmit, formState: {errors}} = useForm<User>({mode: 'all'})
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const {dispatch} = useContext(authContext);
@@ -17,8 +17,8 @@ export const SigninComponent: FC = () => {
         .then(response => {
           const {status, data} = response;
           if (status === 200) {
-            dispatch({type: "auth", payload: true});
-            dispatch({type: "token", payload: data.token})
+            dispatch({type: 'auth', payload: true});
+            dispatch({type: 'token', payload: data.token})
             navigate('/store')
           }
           setLoading(false);
@@ -26,11 +26,11 @@ export const SigninComponent: FC = () => {
   }
   return (
       <>
-        {loading && <SpinnerComponent />}
+        {loading && <SpinnerComponent/>}
         <form onSubmit={handleSubmit(submitData)}>
           <div className="form-control">
             <label htmlFor="username">Login</label>
-            <input {...register("username", {required: true})} type="text"/>
+            <input {...register('username', {required: true})} type="text"/>
           </div>
           {errors.username && <div className="error">Name is required</div>}
           <div className="form-control">

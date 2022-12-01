@@ -13,12 +13,14 @@
   gap: .5rem;
   transition: all .3s ease-in-out;
   cursor: pointer;
+
   h4 {
     height: 2rem;
     //overflow: hidden;
     //white-space: nowrap;
     //text-overflow: ellipsis;
   }
+
   img {
     display: block;
     margin: auto;
@@ -26,10 +28,12 @@
     height: 12rem;
     border-radius: .5rem;
   }
+
   button {
     margin: auto;
     width: fit-content;
   }
+
   &:hover {
     scale: 1.01;
   }

@@ -1,10 +1,10 @@
-import "./user.component.scss";
-import { FC, useContext, useEffect, useState } from "react";
-import { User } from "../../shared/interfaces";
-import { getUserInfo, updateUser } from "../../services/user.service";
-import { useNavigate } from "react-router-dom";
-import { useForm } from "react-hook-form";
-import { authContext } from "../../context/state";
+import './user.component.scss';
+import {FC, useContext, useEffect, useState} from 'react';
+import {User} from '../../shared/interfaces';
+import {getUserInfo, updateUser} from '../../services/user.service';
+import {useNavigate} from 'react-router-dom';
+import {useForm} from 'react-hook-form';
+import {authContext} from '../../context/state';
 
 export const UserComponent: FC = () => {
   const {dispatch} = useContext(authContext);
@@ -31,8 +31,8 @@ export const UserComponent: FC = () => {
   }
 
   const deleteUser = () => {
-    dispatch({type: "auth", payload: false});
-    dispatch({type: "token", payload: ""})
+    dispatch({type: 'auth', payload: false});
+    dispatch({type: 'token', payload: ''})
     navigate('/auth');
   }
 
@@ -57,7 +57,7 @@ export const UserComponent: FC = () => {
                        id="username"/>
               </div>
               {errors.username?.type === 'required' && <div className="error">Login is required</div>}
-              {errors.username?.type === "minLength" && <div className="error">Login too short</div>}
+              {errors.username?.type === 'minLength' && <div className="error">Login too short</div>}
               <div className="form-control">
                 <label htmlFor="email">Email</label>
                 <input {...register('email', {required: true, pattern: emailPattern})} type="email" name="email"

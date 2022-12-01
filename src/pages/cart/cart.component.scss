@@ -6,6 +6,7 @@
   width: 90%;
   margin: auto;
 }
+
 .cart__item {
   display: flex;
   align-items: center;
@@ -13,6 +14,7 @@
   border: .1rem solid $dark;
   border-radius: .5rem;
   margin: 1rem 0;
+
   input {
     width: 4rem;
     border: none;
@@ -20,11 +22,13 @@
     margin: 0 .5rem;
     padding: .5rem;
   }
+
   button {
     @include button-accent;
     margin: 0 auto;
   }
 }
+
 .cart__item-title {
   width: auto;
   margin: .5rem 1rem;
@@ -32,6 +36,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
 .cart__item-quantity {
   flex: none;
   padding: .5rem 1rem;

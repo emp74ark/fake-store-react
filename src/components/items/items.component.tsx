@@ -1,10 +1,10 @@
-import "./items.component.scss";
-import React, { FC, useEffect, useState } from "react";
-import { Item } from "../../shared/interfaces";
-import { ItemComponents } from "../item/item.components";
-import { getAll, getCategories } from "../../services/items.service";
-import { SpinnerComponent } from "../spinner/spinner.component";
-import { SearchComponent } from "../search/search.component";
+import './items.component.scss';
+import React, {FC, useEffect, useState} from 'react';
+import {Item} from '../../shared/interfaces';
+import {ItemComponents} from '../item/item.components';
+import {getAll, getCategories} from '../../services/items.service';
+import {SpinnerComponent} from '../spinner/spinner.component';
+import {SearchComponent} from '../search/search.component';
 
 const ItemsComponent: FC = () => {
   const [items, setItems] = useState<Item[]>([])

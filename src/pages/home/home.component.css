@@ -9,7 +9,7 @@ section img {
 section {
   height: calc(100vh - 6rem);
   width: 100%;
-  background: #E8DFCA;
+  background: #e8dfca;
   margin: 0.5rem auto;
   position: relative;
   display: flex;

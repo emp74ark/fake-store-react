@@ -8,7 +8,7 @@ export const Protected: FC<Children> = ({children}) => {
   return (
       <>
         {state.authenticated && children}
-        {!state.authenticated && <AuthComponent />}
+        {!state.authenticated && <AuthComponent/>}
       </>
   );
 }

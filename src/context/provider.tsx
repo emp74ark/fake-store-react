@@ -1,5 +1,5 @@
-import { FC, useReducer } from "react";
-import { Children } from "../shared/interfaces";
+import {FC, useReducer} from 'react';
+import {Children} from '../shared/interfaces';
 import {authReducer, cartReducer} from './reducer';
 import {authContext, authState, cartContext} from './state';
 import {cart} from '../services/cart.service';

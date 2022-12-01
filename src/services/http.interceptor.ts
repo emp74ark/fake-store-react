@@ -1,5 +1,5 @@
-import axios from "axios";
-import { BASE_URL } from "./http.service.conf";
+import axios from 'axios';
+import {BASE_URL} from './http.service.conf';
 
 export const http = axios.create();
 

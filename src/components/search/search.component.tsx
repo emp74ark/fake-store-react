@@ -1,14 +1,14 @@
-import { FC } from "react";
-import "./search.component.scss";
+import {FC} from 'react';
+import './search.component.scss';
 
-type SearchComponentPropsType = { func: (value: string) => void; }
+type SearchComponentPropsType = {func: (value: string) => void;}
 
 export const SearchComponent: FC<SearchComponentPropsType> = (props) => {
   const searchHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     props.func(e.target.value)
   }
 
-  return(
+  return (
       <form className="search">
         <input
             type="search"

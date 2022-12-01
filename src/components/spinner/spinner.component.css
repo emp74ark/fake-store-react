@@ -12,11 +12,11 @@
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background: #7895B2;
+  background: #7895b2;
   position: fixed;
   left: calc(50% - 2.5rem);
   top: calc(50% - 2.5rem);
-  box-shadow: 0 0 1rem #7895B2;
+  box-shadow: 0 0 1rem #7895b2;
   animation-name: blink;
   animation-duration: 2s;
   animation-iteration-count: infinite;
