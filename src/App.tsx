@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {HashRouter, Route, Routes} from 'react-router-dom';
 import './App.scss';
 import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
@@ -9,7 +9,7 @@ import {AuthContextProvider, CartContextProvider} from './context/provider';
 function App() {
   return (
       <AuthContextProvider>
-        <BrowserRouter basename="/fake-store-react">
+        <HashRouter>
           <HeaderComponent/>
           <CartContextProvider>
             <main>
@@ -21,7 +21,7 @@ function App() {
             </main>
           </CartContextProvider>
           <FooterComponent/>
-        </BrowserRouter>
+        </HashRouter>
       </AuthContextProvider>
 
   );
